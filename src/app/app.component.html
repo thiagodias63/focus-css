@@ -1,0 +1,9 @@
+<header class="header">
+  <a href="#" (click)="menuActive = 'menu'" class="header-item"
+    [ngClass]="{ 'header-item--active': menuActive === 'menu' }">Show focus in menu</a>
+  <a href="#" (click)="menuActive = 'form'" class="header-item"
+    [ngClass]="{ 'header-item--active': menuActive === 'form' }">Show focus in forms</a>
+</header>
+
+<app-focus-in-menu *ngIf="menuActive === 'menu'"></app-focus-in-menu>
+<app-focus-with *ngIf="menuActive === 'form'"></app-focus-with>
